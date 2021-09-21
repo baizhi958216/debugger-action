@@ -1,0 +1,10 @@
+name: CI
+on: [push]
+#这样就不用切换分支了，用当前分支
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Setup tmate Session
+        uses: mxschmitt/action-tmate@v1
